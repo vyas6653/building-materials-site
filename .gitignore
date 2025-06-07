@@ -1,0 +1,14 @@
+# Backend
+building-materials-backend/node_modules/
+building-materials-backend/uploads/
+building-materials-backend/.env
+
+# Frontend
+building-materials-frontend/node_modules/
+building-materials-frontend/build/
+building-materials-frontend/dist/
+
+# System and logs
+.DS_Store
+Thumbs.db
+*.log

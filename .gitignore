@@ -1,14 +1,14 @@
-# Backend
+# === Backend ===
 building-materials-backend/node_modules/
 building-materials-backend/uploads/
 building-materials-backend/.env
 
-# Frontend
-building-materials-frontend/node_modules/
-building-materials-frontend/build/
-building-materials-frontend/dist/
+# === Frontend ===
+building-materials-frontend/my-react-app/node_modules/
+building-materials-frontend/my-react-app/build/
+building-materials-frontend/my-react-app/dist/
 
-# System and logs
+# === System ===
 .DS_Store
 Thumbs.db
 *.log

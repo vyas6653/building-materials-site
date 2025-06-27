@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { getToken } from '../utils/auth';
 
-
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // backend URL
+  baseURL: process.env.REACT_APP_API_BASE_URL + '/api', // Use environment variable
 });
 
 // Add token to headers

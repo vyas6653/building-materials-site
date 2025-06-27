@@ -13,7 +13,11 @@ const app = express();
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.use(cors({ origion:'http://localhost:3000'}));
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);

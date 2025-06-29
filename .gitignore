@@ -1,6 +1,6 @@
 # === Backend ===
 building-materials-backend/node_modules/
-building-materials-backend/uploads/
+# ===building-materials-backend/uploads/===
 building-materials-backend/.env
 
 # === Frontend ===

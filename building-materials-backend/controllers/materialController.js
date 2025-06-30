@@ -32,7 +32,7 @@ exports.createMaterial = (req, res) => {
     return res.status(400).json({ error: "All fields are required" });
   }
 
-  const imageUrl = `${process.env.BACKEND_URL}/uploads/${image}`;
+  const imageUrl = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
   const sql = "INSERT INTO materials (name, price, image_url) VALUES (?, ?, ?)";
 
   db.query(sql, [name, price, imageUrl], (err, result) => {

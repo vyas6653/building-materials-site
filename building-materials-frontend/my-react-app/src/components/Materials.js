@@ -26,11 +26,11 @@ function Materials() {
       <p>Price: ₹{item.price}</p>
       
       {/* Image Preview */}
-      <img 
-        src={item.image_url} 
-        alt={item.name} 
-        style={{ width: '150px', height: 'auto', border: '1px solid #ccc' }} 
-      />
+     <img
+  src={`${process.env.REACT_APP_API_BASE_URL}/uploads/${item.image_url}`}
+  alt={item.name}
+  style={{ width: '150px', height: 'auto', border: '1px solid #ccc' }}
+/>
     </li>
   ))}
 </ul>

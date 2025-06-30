@@ -58,8 +58,9 @@ function AddMaterial() {
   try {
     await API.post("/materials", formData, {
       headers: {
-        "Content-Type": "multipart/form-data"
-      }
+        Authorization: `Barer $ {getToken()}`,
+      
+      },
     });
     alert("✅ Material added successfully!");
     setForm({ name: "", price: "", image: null });

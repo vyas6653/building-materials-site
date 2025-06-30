@@ -22,6 +22,9 @@ exports.addMaterial = (req, res) => {
 };
 
 exports.createMaterial = (req, res) => {
+  console.log("Uploaded File:", req.file);
+  console.log("Form Body:", req.body);
+
   const { name, price } = req.body;
   const image = req.file ? req.file.filename : null;
 
@@ -29,7 +32,7 @@ exports.createMaterial = (req, res) => {
     return res.status(400).json({ error: "All fields are required" });
   }
 
-  const imageUrl = `$ {process.env.BACKEND_URL}/uploads/${filename}`;
+  const imageUrl = `${process.env.BACKEND_URL}/uploads/${image}`;
   const sql = "INSERT INTO materials (name, price, image_url) VALUES (?, ?, ?)";
 
   db.query(sql, [name, price, imageUrl], (err, result) => {
@@ -41,4 +44,3 @@ exports.createMaterial = (req, res) => {
     res.status(201).json({ message: "Material added successfully" });
   });
 };
-
